@@ -1,0 +1,1 @@
+import{z as n,r as t}from"./index-2e4a64b9.js";const g=n("loginEmp",()=>{const e=t({});return{loginEmp:e,setLoginEmp:o=>{e.value=o},getLoginEmp:()=>e.value,clearLoginEmp:()=>{e.value={}}}},{persist:!0});export{g as u};

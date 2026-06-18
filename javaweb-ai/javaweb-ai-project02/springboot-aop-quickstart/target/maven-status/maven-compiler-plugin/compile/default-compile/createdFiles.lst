@@ -1,0 +1,15 @@
+cn\kis2\service\DeptService.class
+cn\kis2\aop\MyAspect4.class
+cn\kis2\aop\RecordTimeAspect.class
+cn\kis2\service\impl\DeptServiceImpl.class
+cn\kis2\aop\MyAspect.class
+cn\kis2\aop\MyAspect5.class
+cn\kis2\aop\MyAspect6.class
+cn\kis2\pojo\Result.class
+cn\kis2\mapper\DeptMapper.class
+cn\kis2\aop\MyAspect2.class
+cn\kis2\pojo\Dept.class
+cn\kis2\aop\MyAspect3.class
+cn\kis2\SpringbootAopQuickstartApplication.class
+cn\kis2\anno\LogOperation.class
+cn\kis2\controller\DeptController.class

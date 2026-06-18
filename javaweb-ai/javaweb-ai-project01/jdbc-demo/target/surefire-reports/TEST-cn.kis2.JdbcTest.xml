@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="cn.kis2.JdbcTest" time="0.354" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="C:\develop\java_project\javaweb-ai\jdbc-demo\target\test-classes;C:\develop\java_project\javaweb-ai\jdbc-demo\target\classes;C:\develop\apache-maven-3.9.16\mvn_repo\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;C:\develop\apache-maven-3.9.16\mvn_repo\com\google\protobuf\protobuf-java\3.21.9\protobuf-java-3.21.9.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\junit\jupiter\junit-jupiter\5.9.3\junit-jupiter-5.9.3.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\junit\jupiter\junit-jupiter-params\5.9.3\junit-jupiter-params-5.9.3.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\projectlombok\lombok\1.18.46\lombok-1.18.46.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\develop\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\L\AppData\Local\Temp\surefire4030809814708464047\surefirebooter-20260608161819519_3.jar C:\Users\L\AppData\Local\Temp\surefire4030809814708464047 2026-06-08T16-18-19_373-jvmRun1 surefire-20260608161819519_1tmp surefire_0-20260608161819519_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\develop\java_project\javaweb-ai\jdbc-demo\target\test-classes;C:\develop\java_project\javaweb-ai\jdbc-demo\target\classes;C:\develop\apache-maven-3.9.16\mvn_repo\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;C:\develop\apache-maven-3.9.16\mvn_repo\com\google\protobuf\protobuf-java\3.21.9\protobuf-java-3.21.9.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\junit\jupiter\junit-jupiter\5.9.3\junit-jupiter-5.9.3.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\junit\jupiter\junit-jupiter-params\5.9.3\junit-jupiter-params-5.9.3.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\develop\apache-maven-3.9.16\mvn_repo\org\projectlombok\lombok\1.18.46\lombok-1.18.46.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\L"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="C:\develop\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="style.color" value="always"/>
+    <property name="basedir" value="C:\develop\java_project\javaweb-ai\jdbc-demo"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\L\AppData\Local\Temp\surefire4030809814708464047\surefirebooter-20260608161819519_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
+    <property name="user.name" value="L"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="C:\Users\L\AppData\Roaming\JetBrains\IntelliJIdea2026.1\plugins\maven\lib\intellij.maven.rt\maven-event-listener.jar"/>
+    <property name="localRepository" value="C:\develop\apache-maven-3.9.16\mvn_repo"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\L\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2026.1"/>
+    <property name="java.version" value="17.0.12"/>
+    <property name="user.dir" value="C:\develop\java_project\javaweb-ai\jdbc-demo"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="jansi.passthrough" value="true"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\develop\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\develop\nvm;C:\develop\nodejs;C:\develop\Java\jdk-17\bin;C:\develop\apache-maven-3.9.16\bin;C:\develop\mysql-8.0.34-winx64\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;?C:\Soft\HBuilderX;C:\develop\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files\SlikSvn\bin;C:\develop\pnpm-store;C:\Program Files\dotnet\;C:\Soft\HBuilderX4.45\;C:\ProgramData\chocolatey\bin;C:\Users\L\scoop\shims;C:\Users\L\.local\bin;C:\Users\L\AppData\Local\Microsoft\WindowsApps;C:\Users\L\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2025.3.3\bin;C:\Users\L\AppData\Local\Programs\CodeBuddy CN\bin;C:\Users\L\AppData\Local\Python\bin;C:\Users\L.local\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.12+8-LTS-286"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="maven.repo.local" value="C:\develop\apache-maven-3.9.16\mvn_repo"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testSelect" classname="cn.kis2.JdbcTest" time="0.319">
+    <system-out><![CDATA[User(id=1, username=daqiao, password=123456, name=大乔, age=25)
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdate" classname="cn.kis2.JdbcTest" time="0.021">
+    <system-out><![CDATA[sql执行完毕影响数：1
+]]></system-out>
+  </testcase>
+</testsuite>

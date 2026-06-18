@@ -1,0 +1,57 @@
+package cn.kis2.interceptor;
+
+import cn.kis2.utils.CurrentHolder;
+import cn.kis2.utils.JwtUtils;
+import io.jsonwebtoken.Claims;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.HandlerInterceptor;
+
+@Slf4j
+@Component
+public class TokenInterceptor implements HandlerInterceptor {
+
+    @Override
+    public boolean preHandle(HttpServletRequest req, HttpServletResponse resp, Object handler) throws Exception {
+
+
+        // 1. 获取到请求路径
+        String path = req.getRequestURI(); //  /login /depts/1
+
+        // 2. 判断是否是登录请求，如果路径包含 /login 是登录操作就放心
+        // if (path.contains("/login")) {
+        //     log.info("登录请求放行");
+        //     return true;
+        // }
+        // 3. 获取请求头中的token
+        String token = req.getHeader("token");
+        // 4. 判断是否存在  如果不存在 说明用户没有登录返回401
+        if (token == null || token.isEmpty()) {
+            log.info("token 为空");
+            resp.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return false;
+        }
+        // 5. 如果存在 校验  校验失败依然401
+        try {
+            Claims claims = JwtUtils.parseJWT(token);
+            Integer empId = Integer.valueOf(claims.get("id").toString());
+            CurrentHolder.setCurrentId(empId); // 存入
+            log.info("当前登录员工id：{}", empId);
+        } catch (Exception e) {
+            log.info("令牌非法 响应401");
+            resp.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return false;
+        }
+        // 6. 校验通过 放行
+        log.info("令牌合法 放行");
+        return true;
+    }
+
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+        // 请求结束后清除ThreadLocal，防止内存泄漏
+        CurrentHolder.remove();
+    }
+}

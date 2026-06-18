@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: aliyun-oss-spring-boot-autoconfigure

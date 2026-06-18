@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/tlias-web-management/src/main/java/cn/kis2/mapper/ClazzMapper.java" value="7fe3fdf8-7e2d-44ed-a18d-51c4116e2402" />
+    <file url="file://$PROJECT_DIR$/tlias-web-management/src/main/java/cn/kis2/mapper/EmpLogMapper.java" value="7fe3fdf8-7e2d-44ed-a18d-51c4116e2402" />
+    <file url="file://$PROJECT_DIR$/tlias-web-management/src/main/java/cn/kis2/mapper/OperateLogMapper.java" value="7fe3fdf8-7e2d-44ed-a18d-51c4116e2402" />
+  </component>
+</project>

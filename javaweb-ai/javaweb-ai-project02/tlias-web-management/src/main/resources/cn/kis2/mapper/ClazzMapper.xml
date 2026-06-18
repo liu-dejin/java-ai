@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.kis2.mapper.ClazzMapper">
+    <select id="list" resultType="cn.kis2.pojo.Clazz">
+        SELECT
+        c.*,
+        CASE
+        WHEN c.begin_date > c.end_date THEN '已结课'
+        WHEN c.begin_date &lt; c.end_date THEN '未开班'
+        ELSE '在读中'
+        END AS status,
+        e.name AS masterName
+        FROM clazz c
+        LEFT JOIN emp e ON c.master_id = e.id
+        <where>
+            <if test="name != null and name != ''">
+                AND c.name LIKE CONCAT('%', #{name}, '%')
+            </if>
+            <if test="begin != null and end != null">
+                AND c.create_time BETWEEN #{begin} AND #{end}
+            </if>
+        </where>
+    </select>
+</mapper>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.kis2.mapper.StudentMapper">
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into student (name, no, gender, phone, id_card, is_college, address, degree, graduation_date, clazz_id, create_time, update_time)
+        values
+        <foreach collection="student" item="student" separator=",">
+            (#{student.name}, #{student.no}, #{student.gender}, #{student.phone}, #{student.idCard}, #{student.isCollege}, #{student.address}, #{student.degree}, #{student.graduationDate}, #{student.clazzId}, #{student.createTime}, #{student.updateTime})
+        </foreach>
+    </insert>
+
+    <update id="update">
+        update student
+        <set>
+            <if test="name != null and name != ''">name = #{name},</if>
+            <if test="no != null and no != ''">no = #{no},</if>
+            <if test="gender != null and gender != ''">gender = #{gender},</if>
+            <if test="phone != null and phone != ''">phone = #{phone},</if>
+            <if test="idCard != null and idCard != ''">id_card = #{idCard},</if>
+            <if test="isCollege != null">is_college = #{isCollege},</if>
+            <if test="address != null and address != ''">address = #{address},</if>
+            <if test="degree != null and degree != ''">degree = #{degree},</if>
+            <if test="graduationDate != null">graduation_date = #{graduationDate},</if>
+            <if test="clazzId != null">clazz_id = #{clazzId},</if>
+            <if test="violationCount != null">violation_count = #{violationCount},</if>
+            <if test="violationScore != null">violation_score = #{violationScore},</if>
+            update_time = #{updateTime}  <!-- 最后一项不需要逗号 -->
+        </set>
+        where id = #{id}
+    </update>
+    <delete id="deleteBatchIds">
+        delete from student where id in <foreach collection="ids" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+    <select id="getStudentList" resultType="cn.kis2.pojo.Student">
+        select s.*,c.name as clazzName
+        from student s,clazz c
+        <where>
+            s.clazz_id = c.id
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="degree != null and degree != ''">
+                and degree = #{degree}
+            </if>
+            <if test="clazzId != null">
+                and clazz_id = #{clazzId}
+            </if>
+        </where>
+        order by id desc
+
+    </select>
+</mapper>
