@@ -11,8 +11,9 @@ logging:
   level:
     org.springframework.jdbc.support.JdbcTransactionManager: debug
 
-# 配置MyBatis的日志输出
-mybatis:
+mybatis-plus:
+  type-aliases-package: cn.kis2.pojo
+  mapper-locations: classpath:mapper/**/*Mapper.xml
   configuration:
+    map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-    map-underscore-to-camel-case: true    # 开启驼峰命名
